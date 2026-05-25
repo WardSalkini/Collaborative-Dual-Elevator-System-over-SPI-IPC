@@ -190,7 +190,7 @@ Each elevator runs a deterministic **Mealy FSM** driven by a 50ms hardware timer
 > The full schematic built and simulated in **Proteus**
 
 <p align="center">
-  <img src="mainCir.png" alt="Proteus Circuit Schematic" width="100%">
+  <img src="images/mainCir.png" alt="Proteus Circuit Schematic" width="100%">
 </p>
 
 <br>
