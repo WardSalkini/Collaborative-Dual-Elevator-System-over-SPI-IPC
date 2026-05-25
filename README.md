@@ -15,7 +15,7 @@
 
 ---
 
-*Two STM32 microcontrollers. One SPI bus. Zero polling. Pure interrupt-driven coordination.*
+*Two STM32 microcontrollers. One SPI bus. Pure interrupt-driven coordination.*
 
 </div>
 
