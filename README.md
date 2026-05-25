@@ -65,6 +65,37 @@ This project brings that concept to life on bare-metal STM32 microcontrollers:
 > **The Slave MCU** owns Elevator B. It receives assignments via SPI and reports its status back.
 
 <br>
+---
+
+## 🔌 Circuit Design
+
+> The full schematic built and simulated in **Proteus**
+
+<p align="center">
+  <img src="images/mainCir.png" alt="Proteus Circuit Schematic" width="100%">
+</p>
+
+<br>
+
+---
+
+## 📟 Live Telemetry
+
+> Real-time UART output showing both elevators' states, floors, and movement targets
+
+<p align="center">
+  <img src="images/VT.png" alt="Virtual Terminal - Live Telemetry Output" width="80%">
+</p>
+
+**Telemetry format:**
+```
+[M] A:IDLE F0 | B:UP F1->F3         ← Master reporting both elevators
+[S] B:UP F2->F3                      ← Slave reporting its own status
+[M] A:DOWN F3->F1 | B:DOOR F3       ← Elevator A descending, B at doors
+[M] A:IDLE F1 | B:IDLE F3 [FAULT]   ← Communication fault detected!
+```
+
+<br>
 
 ---
 
@@ -180,41 +211,7 @@ Each elevator runs a deterministic **Mealy FSM** driven by a 50ms hardware timer
 │  └──────────┘  └────────────┘  └──────────────────────┘ │
 └──────────────────────────────────────────────────────────┘
 ```
-
 <br>
-
----
-
-## 🔌 Circuit Design
-
-> The full schematic built and simulated in **Proteus**
-
-<p align="center">
-  <img src="images/mainCir.png" alt="Proteus Circuit Schematic" width="100%">
-</p>
-
-<br>
-
----
-
-## 📟 Live Telemetry
-
-> Real-time UART output showing both elevators' states, floors, and movement targets
-
-<p align="center">
-  <img src="VT.png" alt="Virtual Terminal - Live Telemetry Output" width="80%">
-</p>
-
-**Telemetry format:**
-```
-[M] A:IDLE F0 | B:UP F1->F3         ← Master reporting both elevators
-[S] B:UP F2->F3                      ← Slave reporting its own status
-[M] A:DOWN F3->F1 | B:DOOR F3       ← Elevator A descending, B at doors
-[M] A:IDLE F1 | B:IDLE F3 [FAULT]   ← Communication fault detected!
-```
-
-<br>
-
 ---
 
 ## 📂 Project Structure
