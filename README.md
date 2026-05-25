@@ -8,7 +8,7 @@
 <br>
 
 ![STM32](https://img.shields.io/badge/MCU-STM32F401xE-03234B?style=for-the-badge&logo=stmicroelectronics&logoColor=white)
-![C](https://img.shields.io/badge/Language-C11-A8B9CC?style=for-the-badge&logo=c&logoColor=white)
+![C](https://img.shields.io/badge/Language-C-A8B9CC?style=for-the-badge&logo=c&logoColor=white)
 ![Proteus](https://img.shields.io/badge/Simulation-Proteus-1A73E8?style=for-the-badge)
 ![SPI](https://img.shields.io/badge/Protocol-SPI%20Full--Duplex-FF6F00?style=for-the-badge)
 ![CMake](https://img.shields.io/badge/Build-CMake%20%2B%20Ninja-064F8C?style=for-the-badge&logo=cmake&logoColor=white)
